@@ -30,14 +30,24 @@ section {
   max-width: 1920px;
 }
 
+.container {
+  max-width: 1300px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 header {
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   box-sizing: border-box;
   position: fixed;
   top: 0;
   padding: 24px $base-side-padding 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   color: #fff;
   width: 100%;  
   background-color: #020213;
@@ -94,10 +104,14 @@ header {
 }
 
 .about {
+  
   background-color: #fff;
-  display: flex;
   padding-top: 100px;
   padding-bottom: 118px;
+
+  .container {
+    display: flex;
+  }
 
   h2 {
     font-size: 62px;

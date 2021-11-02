@@ -12,22 +12,24 @@ const Vacancies = ({searchValue}) => {
 
     return (
         <section className="vacancies">
-            <h3 className="">{ searchValue ? `Search for: ${searchValue}` : 'Technology'}</h3>
-            <div className="cards-box">
-                { technologyVacancies
-                    .filter(item => item.vac.toLowerCase().includes(searchValue.toLowerCase()))
-                    .map(item => {
-                   return <Card 
-                            vac={item.vac} 
-                            city={item.city} 
-                            remote={item.remote} 
-                            category={item.category} 
-                            key={item.id} 
-                            id={item.id}                            
-                            />
-                })}
+            <div className="container">
+                <h3 className="">{ searchValue ? `Search for: ${searchValue}` : 'Technology'}</h3>
+                <div className="cards-box">
+                    { technologyVacancies
+                        .filter(item => item.vac.toLowerCase().includes(searchValue.toLowerCase()))
+                        .map(item => {
+                    return <Card 
+                                vac={item.vac} 
+                                city={item.city} 
+                                remote={item.remote} 
+                                category={item.category} 
+                                key={item.id} 
+                                id={item.id}                            
+                                />
+                    })}
+                </div>
+                <h3>Operations</h3>
             </div>
-            <h3>Operations</h3>
         </section>
     )
 }
